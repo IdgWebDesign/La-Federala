@@ -1,0 +1,807 @@
+.LaEmpresaPrueba{
+    display: flex;
+    height: 50em;
+
+}
+
+.imgSection{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    object-position: 0%;
+    transition: 1s;
+}
+
+#LaEmpresa{
+    flex-direction: row-reverse;
+}
+
+
+.sectionPrueba{
+    width: 0%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0% 0%;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0, 0, 0, 0.096) 100%);
+    transition: 1s;
+    opacity: 0;
+}
+
+.sectionPrueba img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 3%;
+    
+}
+.FormatTitle{
+    color: rgb(17, 112, 82);
+}
+.contTextructura p{
+    line-height: 140%;
+    font-size: 1em;
+    color: rgb(17, 112, 82);
+}
+
+.subLE{
+    color:rgb(17, 112, 82);
+}
+
+.textLE{
+    color:rgb(17, 112, 82);
+}
+
+.contTextructura{
+    width: 100%;
+}
+
+.step-1{
+    display: flex;
+}
+
+.step-2{
+    width: 40%;
+    padding: 0% 5%;
+}
+
+
+
+
+
+.Plano{
+    width: 100%;
+    background-image: url(./img/PlanoBG\ 2.png);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    padding: 3% 0%;
+    text-align: center;
+    position: relative;
+    transition: 0.5s;
+}
+
+.sectionActive{
+    padding: 4% 0%;
+    background-image: url(./img/PlanoBG3.png);
+    background-position: center center;
+}
+
+#titlePlano{
+    cursor: pointer;
+    margin-bottom: 1%;
+}
+
+.m0{
+    margin-bottom: 0% !important;
+}
+.contPlano{
+    
+    height: 0em;
+    width: 70%;
+    margin: auto;    
+    transition: 0.5s;
+}
+
+.contPlano img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: 0.5s;
+    
+}
+
+
+.active{
+    height: 39em;
+}
+
+#arrow{
+    height: 1em;
+    width:0.7em;
+    object-fit: contain;
+    transition: 0.5s;
+ 
+    transform-origin: 50% 27%;
+}
+
+.arrowctive{
+    transform: rotate(-180deg);
+    
+    margin-top: 2%;
+}
+
+.Ventas{
+    display: flex;
+    background-image: url(./img/ventasBG4.png);
+    background-size: cover;
+    background-position: center;
+    height: 40em;
+}
+
+.visualizerVentas{
+    width: 100%;
+    height: 40em;
+    display: flex;
+    
+    background-color: aliceblue;
+}
+
+.visualizerVentas img{
+    width: 25%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.itemVentas{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 3%;
+    flex-direction: column;
+    position: relative;
+    
+    /* border-right: solid  rgba(255, 255, 255, 0.384); */
+}
+
+
+
+.imgVentas{
+    width: 10em;
+    object-fit: contain;
+    z-index: 90;
+    flex: 1;
+}
+
+.despVentas{
+    width: 100%;
+    height: 0%;
+    background-color: #072e21c4;
+    transition: 0.5s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.itemVentas:hover .despVentas{
+    height: 100%;
+    display: flex;
+}
+
+
+
+.infoVentas{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    margin-right:0;
+    opacity: 1;
+    transition: 0.5s;
+    width: 50%;
+}
+
+
+
+.infoVentas img{
+    width: 2em;
+    object-fit: contain;
+    margin-bottom: 5%;
+}
+
+.infoVentas p{
+    font-size: 0.9em;
+    font-family: "Source-SB";
+}
+
+.contFlex{
+    z-index: 997;
+    opacity: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    transition: 0.5s;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .itemVentas:hover .contFlex{
+        opacity: 1;
+        
+    }
+}
+
+.Contacto{
+padding:1% 0%;
+background: rgb(0 81 33);
+/* background: linear-gradient(0deg, rgba(0,105,52,1) 0%, rgba(0,152,76,1) 40%, rgba(0,152,76,1) 60%, rgba(0,105,52,1) 100%); */
+}
+
+.infoContacto{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+}
+
+
+.infoContacto p{   
+    color: white;
+}
+
+.logosContacto{
+    width: 2em;
+    height: 1.8em;
+    object-fit: contain;
+}
+
+.infoContacto .itemNav{
+    display: flex;
+    
+    align-items: center;
+}
+
+.contContacto{
+    display: flex;
+   width: 30em;
+    justify-content:center;
+    align-self: center;
+}
+.contContacto *{
+    margin: 0% 5%;
+}
+.logoLF{
+    height: 3.8rem;
+    margin-bottom: 1%;
+    object-fit: contain;
+}
+
+.Galeria{
+    position: relative;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0, 0, 0, 0.096) 100%);
+    /* background:radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0, 0, 0, 0.096) 100%); */
+}
+
+.galTitle{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center; 
+    margin-bottom: 1%;
+    
+    
+}
+
+.galTitle img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    
+}
+
+
+.galTitle h2{
+    color:rgb(17, 112, 82);
+    font-family: "Utopia";
+    font-size: calc(1.5em + 1vw);
+}
+
+
+.swiper{
+    height: 40em;
+    width: 100%;
+    
+}
+
+.swiper:hover .swiper-button-next, .swiper:hover .swiper-button-prev{
+    opacity: 1;
+}
+.swiper-button-next, .swiper-button-prev{
+    color: white;
+    backdrop-filter: blur(1px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.imgal img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .8;
+    transition: 0.5s;
+    object-position: center;
+}
+
+.imgal:hover img{
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.menuburger{
+    display: none;
+}
+
+.menuburger div {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+
+.step-unique{
+    width: 60%;
+}
+
+.wrapNav{
+    display: none;
+    width: 0%;
+    height: 100%;
+    transition: 0.5s;
+    position: fixed;
+    background:radial-gradient(circle, rgba(255,255,255,1) 0%, rgb(223 223 223) 100%);
+}
+
+.contWrap{
+    width: 100%;
+    height: 100%;
+    padding: 9.6rem  3rem 3.6rem 3.6rem;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: flex-start;
+}
+
+.closer{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 50px;
+    top:43px;
+}
+
+.closer img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.openNav{
+    display: flex;
+    width: 350px;
+    z-index: 999;
+    transform: translateX(-350px);
+    left: 100%;
+    
+}
+
+@media only screen and (max-width: 1400px) {
+    .contNav{
+        width:60%;
+    }
+    .contPlano{
+        width: 80%;
+    }
+    .active{
+        height: 40em;
+    }
+    .swiper{
+        height: 35em;
+    }
+}
+
+
+
+@media only screen and (max-width: 1300px) {
+    .contFlex{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .step-2{
+        padding: 0% 3%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .contNav{
+        width:75%;
+    }
+    .step-unique{
+        width: 50%;
+    }
+    .step-2{
+        width: 50%;
+    }
+    .contPlano{
+        width: 90%;
+    }
+    .active{
+        height: 35em;
+    }
+    .bgnavactive {
+        opacity: 0;
+        background: radial-gradient(circle, rgb(17 112 82 / 96%) 40%, rgba(0,0,0,0) 100%);
+    }  
+}
+
+@media only screen and (max-width: 900px) {
+    .imgVentas{
+        width: 8em;
+    }
+
+    .infoVentas img{
+        width: 1.5em;
+    }
+
+    .infoVentas p{
+        font-size: 0.8em;
+    }
+
+    .logoLF{
+        height: 3.5rem;
+        margin-bottom: 2%;
+    }
+
+    .logosContacto{
+        height: 1.7em;
+        width: 1.7em;
+        
+    }
+    .contContacto *{
+        margin: 0% 3.5%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .FormatTitle{
+        font-size: 1.8em;
+    }
+    .itemNav{
+        display: none;
+    } 
+
+    .sectionPrueba img{
+        height: 40px;
+        width: 40px;
+    }
+    .subLE{
+        font-size: 0.9em;
+    }
+
+    .textLE{
+        font-size: 0.9em;
+    }
+    
+    .contTextructura p{
+        font-size: 0.9em;
+    }
+
+    .LaEmpresaPrueba{
+        height: 40em;
+    }
+
+    .active{
+        height: 30em;
+    }
+    .Plano{
+        padding: 5% 0%;
+    }
+    .swiper{
+        height: 30em;
+    }
+    
+    .Ventas{
+        flex-direction: column;
+    }
+    .itemVentas{
+        flex-direction: row;
+        width: 100%;
+        height: 25%;
+    }
+    .contFlex{
+        flex-direction: row;
+    }
+    .despVentas{
+        width: 0%;
+        height: 100%;
+        background-color: #072e21c4;
+        transition: 0.5s ease;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    
+   
+
+    .infoVentas img{
+        margin-bottom: 2%;
+    }
+    .infoVentas p{
+        margin: 0;
+    }
+
+    .stype{
+        flex-direction: row-reverse;
+    }
+
+    .menuburger{
+        display:block;
+        position: absolute;
+        right: -5%;
+        transform: translate(0%, -50%);
+        top: 50%;
+    }
+
+    
+
+    .logo{
+        height: 3.5rem;
+        margin: 2% 0%;
+    }
+}
+@media only screen and (max-width: 768px) {
+.itemVentas:hover .despVentas{
+        
+}
+}
+
+
+@media only screen and (max-width: 700px) {
+    
+    .FormatTitle{
+        font-size: 1.8em;
+        margin-bottom: 1%;
+    }
+
+    .sectionPrueba img{
+        height: 40px;
+        width: 40px;
+        margin-bottom: 1%;
+    }
+    .subLE{
+        font-size: 0.9em;
+        margin: 0;
+    }
+
+    .textLE{
+        font-size: 0.9em;
+    }
+    
+    .contTextructura p{
+        font-size: 0.9em;
+    }
+
+    #LaEmpresa{
+        flex-direction: column;
+    }
+    .sectionPrueba{
+        height: 0%;
+        width: 100%;
+    }
+    .step-unique{
+        height: 50%;
+        width: 100%;
+    }
+    .step-2{
+        height: 50%;
+        width: 100%;
+    }
+    .LaEmpresaPrueba{
+        flex-direction: column;
+    }
+    
+    .contTextructura{
+        padding: 0% 4%;
+    }
+
+    #t1{
+        background-image: url(img/bg-img/HOME\ 01.png);
+      }
+      #t2{
+        background-image: url(img/bg-img/HOME\ 03.png);
+      }
+      #t3{
+        background-image: url(img/bg-img/HOME\ 02.png);
+      }
+    
+    .H1ADD{
+        position: absolute;
+    width: 55% !important;
+    min-width: 500px;
+    bottom: 0%;
+    left: 10%;
+    }
+    .H2ADD {
+        position: absolute;
+        width: 60% !important;
+        bottom: 0%;
+        right: 0%;
+        min-width: 500px;
+    }
+
+    
+    .single-hero-post {
+        height: 600px; }
+
+    .imgVentas{
+        width: 7em;
+    }
+    .Ventas{
+        height: 35em;
+    }
+    .itemVentas{
+        padding: 5% 5%  ;
+    }
+    .bgnavactive {
+        opacity: 0;
+        background: rgb(17 112 82);
+    }
+
+    .logoLF{
+        height: 3.2rem;
+        margin-bottom: 2%;
+    }
+
+    .logosContacto{
+        height: 1.6em;
+        width: 1.6em;
+        
+    }
+
+    .contContacto *{
+        margin: 0% 3%;
+    }
+    .infoContacto{
+        width: 100%;
+    }
+    
+      
+}
+@media only screen and (max-width: 600px) {
+    .textLE{
+        line-height: 125%;
+    }
+
+    .active{
+        height: 25em;
+    }
+    .play-btn{
+        min-width: 250px;
+    } 
+}
+
+@media only screen and (max-width: 500px) {
+    .logoLF{
+        height: 2.9rem;
+        margin-bottom: 2%;
+    }
+
+    .logosContacto{
+        height: 1.4em;
+        width: 1.4em;
+        
+    }
+
+    .contContacto *{
+        margin: 0% 3%;
+    }
+    .contContacto{
+        width: 15em;
+    }
+
+    .infoContacto{
+        width: 100%;
+    }
+    .contTextructura{
+        padding: 0;
+    }
+    .textLE{
+        font-size: 0.7em;
+    }
+
+    .contTextructura p{
+        font-size: 0.7em;
+    }
+    .sectionPrueba img{
+        width: 35px;
+        height: 35px;
+    }
+    .FormatTitle{
+        font-size: 1.5em;
+    }
+
+    .active{
+        height: 20em;
+    }
+    .Plano{
+        padding: 6% 0%;
+    } 
+    .swiper{
+        height: 25em;
+    }
+    .imgVentas{
+        width: 5em;
+    }
+    
+    .itemVentas{
+        padding: 5% 5%;
+    }
+    .H1ADD{
+        position: absolute;
+    width: 55% !important;
+    min-width: 400px;
+    bottom: 0%;
+    left: 0%;
+    }
+    .H2ADD {
+        position: absolute;
+        width: 60% !important;
+        bottom: 0%;
+        right: -10%;
+        min-width: 400px;
+    }    
+    .single-hero-post {
+        height: 550px; }
+        .Ventas{
+            height: 28em;
+        }
+        .infoVentas p {
+          font-size: 0.6em;
+        }
+}
+.ventasActive{
+    width: 100% !important;
+    display: flex;
+}
+.step-3{
+    opacity: 1;
+}
+
+a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.mobile{
+    display: block;
+    flex: 0;
+    width: auto;
+    color: rgb(17, 112, 82);
+    font-size: 1.1rem;
+    margin-bottom: 8%;
+    letter-spacing: 0.05em;
+}
+

@@ -15,80 +15,56 @@
     <link rel="icon" href="img/core-img/favicon.ico">
 
     <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="./swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="test.css">
+    
 
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div class="preloader d-flex align-items-center justify-content-center">
-        <div class="preloader-circle"></div>
-        <div class="preloader-img">
-            <img src="img/core-img/leaf.png" alt="">
-        </div>
-    </div>
+    
 
     <!-- ##### Header Area Start ##### -->
-    <header class="header-area">
-
+    <nav id="navbar">
+        <div class="bgnav"></div>
+        <div class="bgnavactive"></div>
+        <div class="contNav">
+            
+            
+            <a class="itemNav" href="#LaEmpresa">El barrio</a>
+            <a class="itemNav" href="#Infra">Infraestructura</a>
+            <a class="itemNav" href="#Plano">Masterplan</a>
         
-
-        <!-- ***** Navbar Area ***** -->
-        <div class="alazea-main-menu">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container">
-                    <!-- Menu -->
-                    <nav class="classy-navbar justify-content-center" id="alazeaNav">
-
-                        <!-- Nav Brand -->
-                        
-                        <a style="height: 70%;" href="index.html" class="nav-brand"><img style="object-fit: contain; height: 100%; width: 100%;" src="img/logo.png" alt=""></a>
-                        
-                        <!-- Navbar Toggler -->
-                        <div class="classy-navbar-toggler">
-                            <span class="navbarToggler"><span></span><span></span><span></span></span>
-                        </div>
-
-                        <!-- Menu -->
-                        <div class="classy-menu">
-
-                            <!-- Close Button -->
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                            </div>
-
-                            <!-- Navbar Start -->
-                            <div class="classynav">
-                                <ul>
-                                    <li><a href="#LaEmpresa" class="navStyle">La empresa</a></li>
-                                    <li class="navStyle">|</li>
-                                    <li><a href="#Plano" class="navStyle">Plano</a></li>
-                                    <li class="navStyle">|</li>
-                                    <li><a href="#Ventas" class="navStyle">Ventas</a></li>
-                                    <li class="navStyle">|</li>
-                                    <li><a href="#Galeria" class="navStyle">Galería</a></li>
-                                    <li class="navStyle">|</li>
-                                    <li><a href="#Contacto" class="navStyle">Contacto</a></li>
-                                </ul>
-
-                                <!-- Search Icon -->
-                                <div id="searchIcon">
-                                    <img class="iconredes" src="img/IG.png" alt="">
-                                    <img class="iconredes" src="img/FB.png" alt="">
-                                    
-                                </div>
-
-                            </div>
-                            <!-- Navbar End -->
-                        </div>
-                    </nav>
-
-                    <!-- Search Form -->
-                  
-                </div>
+        
+            <img id="logoNav" class="logo" src="./img/logored.png" alt="">
+        
+        
+            <a class="itemNav" href="#Galeria">Galeria  </a>
+            <a class="itemNav" href="#Ventas">Ventas</a>
+            <a class="itemNav" href="#Contacto">Contacto</a>
+            
+            <div id="opener" class="menuburger">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
+
+            
         </div>
-    </header>
+    </nav>
+    <div id="mobileNav" class="wrapNav">
+        <div id="close" class="closer clNav"><img src="./img/cross.png" alt=""></div>
+        <div class="contWrap">
+            <a class="itemNav mobile clNav" href="#LaEmpresa">EL BARRIO</a>
+            <a class="itemNav mobile clNav" href="#Infra">INFRAESTRUCTURA</a>
+            <a class="itemNav mobile clNav" href="#Plano">MASTERPLAN</a>
+            <a class="itemNav mobile clNav" href="#Galeria">GALERIA  </a>
+            <a class="itemNav mobile clNav" href="#Ventas">VENTAS</a>
+            <a class="itemNav mobile clNav" href="#Contacto">CONTACTO</a>
+        </div>
+    </div>
+    
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Hero Area Start ##### -->
@@ -98,238 +74,203 @@
             <!-- Single Hero Post -->
             <div class="single-hero-post bg-overlay">
                 <!-- Post Image -->
-                <div class="slide-img bg-img" style="background-image: url(img/bg-img/HOME\ 01.png);"></div>
+                <div id="t1" class="slide-img bg-img"></div>
                 <img class="H1ADD" src="img/bg-img/add HOME1.png" alt="">
             </div>
 
             <div class="single-hero-post bg-overlay paritcularHERO">
                 <!-- Post Image -->
-                <div class="slide-img bg-img" style="background-image: url(img/bg-img/HOME\ 03.png);"></div>
+                <div id="t2" class="slide-img bg-img" style="background-image: url(img/bg-img/HOME\ 03.png);"></div>
                 <img class="play-btn" src="img/bg-img/add HOME3.png" alt="">
             </div>
 
             <!-- Single Hero Post -->
             <div class="single-hero-post bg-overlay">
                 <!-- Post Image -->
-                <div class="slide-img bg-img" style="background-image: url(img/bg-img/HOME\ 02.png);"></div>
-                <img class="H2ADD" src="img/bg-img/add HOME2.png" alt="">
+                <div id="t3" class="slide-img bg-img" style="background-image: url(img/bg-img/HOME\ 02.png);"></div>
+                <img class="H2ADD fw" src="img/bg-img/add HOME2.png" alt="">
             </div>
 
-           
+
 
         </div>
     </section>
     <!-- ##### Hero Area End ##### -->
 
-    <!-- ##### LaEmpresa Area Start ##### -->
-    <section class="LaEmpresa" id="LaEmpresa">
-    <div class="flexCont">
-        <div class="titleGral">
-            <h2 class="FormatTitle">La Empresa</h2>
-            <h3 class="FormatSubTitle">LA FEDERALA CLUB DE CAMPO</h3>
-        </div>
-        <div class="contentLaEmpresa">
-            <div class="textContent">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus harum animi illo ut excepturi, nemo iusto molestias repellat labore accusamus quidem aliquid, deserunt corrupti quisquam doloremque culpa soluta odit eligendi!</p>
-            </div>
-            <div class="imgContent">
-            <img style="width: 100%; " src="img/LaEmpresa.png" alt="">
-            </div>  
-        </div>
-    </div>
-    </section>
-    <!-- ##### LaEmpresa Area End ##### -->
 
-    <!-- ##### Plano Area Start ##### -->
-    <section class="Plano" id="Plano">
-        <div class="flexCont">
-            <div class="titleGral">
-                <h2 class="FormatTitle">Plano</h2>
-                <h3 class="FormatSubTitle">LA FEDERALA CLUB DE CAMPO</h3>
-            </div>
-            <div class="contentLaEmpresa">
-                
+    <section id="LaEmpresa" class="LaEmpresaPrueba">
+        
+        <img class="imgSection" id="sec1" src="./img/EL BARRIO.png" alt="">
+        <div id="sec2" class="sectionPrueba">
+            <img src="./img/pueblo2.png" alt="">
+            <h2 class="FormatTitle">El barrio</h2>
+            <h3 class="subLE">ACCESO DIRECTO SOBRE LA RUTA 205</h3>
+            <p class="textLE"><span style="font-family: 'Source-SB'; letter-spacing: 0.2ch; color: rgb(17, 112, 82);">La Federala Club de Campo</span>, en el kilómetro 105,5 de la ruta 205. <br>
+                Pensado, diseñado y desarrollado exclusivamente para el beneficio de sus
+                propietarios. Cuenta con 92 hectáreas con más del 50% de espacios verdes comunes
+                y amplios lotes, los cuales conjugan armoniosamente la belleza natural del campo con un excelente diseño paisajístico contando con diversas arboledas y espejos de agua.
+                 A tan solo 10 minutos del centro de Lobos, 35 minutos de Cañuelas y a 100 km de
+                Capital Federal.<span style="font-family: 'Source-SB'; letter-spacing: 0.2ch; color: rgb(17, 112, 82);"> Este es el lugar ideal para realizar su proyecto familiar y una
+                excelente opción de inversión en un barrio consolidado.</span> </p>
+        </div>
+    </section>
+
+
+    <section id="Infra" class="LaEmpresaPrueba">
+        <img class="imgSection" id="sec3" src="./img/INFRAESTRUCTURA.png" alt="">
+        <div id="sec4" class="sectionPrueba">
+            <img src="./img/InfraestructuraIcon2.png" alt="">
+            <h2 class="FormatTitle">Infraestructura</h2>
+            
+            <div class="contTextructura">
+                <p class="textLE" style="border-right: 0.07cm solid rgb(17, 112, 82); margin-right: 5%; padding-right: 5%;">- Calles 100% de hormigón <br>
+                    - Instalaciones subterráneas<br>
+                    - Salón de eventos<br>
+                    - Club House con gimnasio <br>
+                    - Pileta con solárium<br>
+                    - Canchas de tenis y futbol <br>
+                    - Alumbrado de calles<br>
+                    - Alumbrado perimetral <br>
+                    - Vigilancia las 24 hs </p>
+
+
+
+                <p class="textLE">
+                    <span style="font-family:Utopia;">MANTENIMIENTO <br></span>
+                    - Instalaciones generales <br>
+                    - Lagos  <br>
+                    - Poda y césped <br>
+                    - Áreas comunes y deportivas</p>
             </div>
         </div>
     </section>
-    <!-- ##### Plano Area End ##### -->
+    
+    
+    
+
+
+    <section class="Plano" id="Plano">
+        
+        <h2 id="titlePlano" class="FormatTitle m0" style="color: white;">Masterplan <span><img id="arrow" src="./img/arrow.png" alt=""></span></h2>
+        <div id="contPlano" class="contPlano">
+            <img id="PlanoIMG" src="./img/Plano.jpg" alt="">
+        </div>
+        
+    </section>
+    <section class="Galeria" id="Galeria">
+       
+     
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="imgal swiper-slide"><img src="./img/g1.png" alt=""></div>
+                <div class="imgal swiper-slide"><img src="./img/g2.png" alt=""></div>
+                <div class="imgal swiper-slide"><img src="./img/g3.png" alt=""></div>
+                <div class="imgal swiper-slide"><img src="./img/g4.png" alt=""></div>
+                <div class="imgal swiper-slide"><img src="./img/g5.png" alt=""></div>
+                <div class="imgal swiper-slide"><img src="./img/g6.png" alt=""></div>
+            </div>   
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- <div class="blured"></div> -->
+        
+    </section> 
+    
+    <!-- ##### LaEmpresa Area End ##### -->
+    
 
     <!-- ##### Ventas Area Start ##### -->
     <section class="Ventas" id="Ventas">
-        <div class="flexCont">
-            <div class="titleGral">
-                <h2 class="FormatTitle">Ventas</h2>
-                <h3 class="FormatSubTitle">LA FEDERALA CLUB DE CAMPO</h3>
-            </div>
-            <div class="contentVentas">
-                <div class="contInmo">
-                    <img class="ImgInmo" src="img/Inm1.png" alt="">
-                    <div class="titleInmo"><p>Nicolas Espinosa</p></div>
-                    <div class="textInmo"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia porro quos ex beatae mollitia molestias, deleniti nisi eligendi suscipit ratione voluptates! Doloribus adipisci delectus, aperiam aliquam ut quae similique in.</p></div>
+        <div class="itemVentas stype">
+            <img class="imgVentas" src="./img/AN.png" alt="">
+            <div class="contFlex">
+                <div class="infoVentas">
+                    <img src="./img/cel.png" alt="">
+                    <p>2227-546076</p>
                 </div>
-                <div class="contInmo">
-                    <img class="ImgInmo" src="img/Inm2.png" alt="">
-                    <div class="titleInmo"><p>Andrea Gianfelice</p></div>
-                    <div class="textInmo"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia porro quos ex beatae mollitia molestias, deleniti nisi eligendi suscipit ratione voluptates! Doloribus adipisci delectus, aperiam aliquam ut quae similique in.</p></div>
-                </div>
-                <div class="contInmo">
-                    <img class="ImgInmo" src="img/Inm3.png" alt="">
-                    <div class="titleInmo"><p>Andinolfi</p></div>
-                    <div class="textInmo"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia porro quos ex beatae mollitia molestias, deleniti nisi eligendi suscipit ratione voluptates! Doloribus adipisci delectus, aperiam aliquam ut quae similique in.</p></div>
-                </div>
-                <div class="contInmo">
-                    <img class="ImgInmo" src="img/Inm4.png" alt="">
-                    <div class="titleInmo"><p>Martín Azgárate</p></div>
-                    <div class="textInmo"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia porro quos ex beatae mollitia molestias, deleniti nisi eligendi suscipit ratione voluptates! Doloribus adipisci delectus, aperiam aliquam ut quae similique in.</p></div>
+                <div class="infoVentas">
+                    <img src="./img/mail.png" alt="">
+                    <p>camilo@andinolfi.com</p>
                 </div>
             </div>
+            
+            <div class="despVentas"></div>
+
         </div>
+
+
+        
+
+
+        <div class="itemVentas">
+            <img class="imgVentas" src="./img/ns.png" alt="">
+            <div class="contFlex">
+                <div class="infoVentas">
+                    <img src="./img/cel.png" alt="">
+                    <p>2227-546076</p>
+                </div>
+                <div class="infoVentas">
+                    <img src="./img/mail.png" alt="">
+                    <p>camilo@andinolfi.com</p>
+                </div>
+            </div>
+
+            <div class="despVentas"></div>
+
+        </div>
+
+
+        <div class="itemVentas stype">
+            <img class="imgVentas" src="./img/MA.png" alt="">
+            <div class="contFlex">
+                <div class="infoVentas">
+                    <img src="./img/cel.png" alt="">
+                    <p>2227-546076</p>
+                </div>
+                <div class="infoVentas">
+                    <img src="./img/mail.png" alt="">
+                    <p>camilo@andinolfi.com</p>
+                </div>
+            </div>
+
+            <div class="despVentas"></div>
+
+        </div>
+        <div class="itemVentas">
+            <img class="imgVentas" src="./img/AG.png" alt="">
+            <div class="contFlex">
+                <div class="infoVentas">
+                    <img src="./img/cel.png" alt="">
+                    <p>2227-546076</p>
+                </div>
+                <div class="infoVentas">
+                    <img src="./img/mail.png" alt="">
+                    <p>camilo@andinolfi.com</p>
+                </div>
+            </div>
+
+            <div class="despVentas"></div>
+
+        </div>
+        
     </section>
     <!-- ##### Ventas Area End ##### -->
 
-    <!-- ##### Portfolio Area Start ##### -->
-    <section class="Galeria" id="Galeria">
-        <div class="flexCont">
-            <div class="titleGral" style="margin-bottom: 5%;">
-                <h2 class="FormatTitle">Galería</h2>
-                <h3 class="FormatSubTitle">LA FEDERALA CLUB DE CAMPO</h3>
-            </div>
-           
-        </div>
-    
-        
-
-        <div class="container-fluid">
-           
-
-            <div class="row alazea-portfolio">
-
-               <!-- Single Portfolio Area -->
-                <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item garden design wow fadeInUp" data-wow-delay="300ms">
-                    <!-- Portfolio Thumbnail -->
-                    <div class="portfolio-thumbnail bg-img" style="background-image: url(img/g2.png);"></div>
-                    <!-- Portfolio Hover Text -->
-                    <div class="portfolio-hover-overlay">
-                        <a href="img/g2.png" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 3">
-                            <div class="port-hover-text">
-                                <h3>Minimal Flower Store</h3>
-                                <h5>Office Plants</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!-- Single Portfolio Area -->
-                <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item garden design wow fadeInUp" data-wow-delay="300ms">
-                    <!-- Portfolio Thumbnail -->
-                    <div class="portfolio-thumbnail bg-img" style="background-image: url(img/g3.png);"></div>
-                    <!-- Portfolio Hover Text -->
-                    <div class="portfolio-hover-overlay">
-                        <a href="img/g3.png" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 3">
-                            <div class="port-hover-text">
-                                <h3>Minimal Flower Store</h3>
-                                <h5>Office Plants</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
+    <section id="Contacto" class="Contacto"> 
+        <div class="infoContacto">
+            <img class="logoLF" src="./img/logo.png" alt="">
+            <div class="contContacto">
                 
-
-                <!-- Single Portfolio Area -->
-                <div class="col-12 col-lg-6 single_portfolio_item home-design wow fadeInUp" data-wow-delay="300ms">
-                    <!-- Portfolio Thumbnail -->
-                    <div class="portfolio-thumbnail bg-img" style="background-image: url(img/g1.png);"></div>
-                    <!-- Portfolio Hover Text -->
-                    <div class="portfolio-hover-overlay">
-                        <a href="img/g1.png" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 7">
-                            <div class="port-hover-text">
-                                <h3>Minimal Flower Store</h3>
-                                <h5>Office Plants</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                   <div class="itemNav"><img class="logosContacto" src="./img/cel.png" alt=""></div> 
+                   <div class="itemNav"><img class="logosContacto" src="./img/mail.png" alt=""></div>
+                    <img class="logosContacto" src="./img/FB.png" alt="">
+                    <img class="logosContacto" src="./img/IG.png" alt="">
                 
-                
-
-                <!-- Single Portfolio Area -->
-                <div class="mt-2 col-12 col-sm-6 col-lg-3 single_portfolio_item design office-design wow fadeInUp" data-wow-delay="100ms">
-                    <!-- Portfolio Thumbnail -->
-                    <div class="portfolio-thumbnail bg-img" style="background-image: url(img/g4.png);"></div>
-                    <!-- Portfolio Hover Text -->
-                    <div class="portfolio-hover-overlay">
-                        <a href="img/g4.png" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 5">
-                            <div class="port-hover-text">
-                                <h3>Minimal Flower Store</h3>
-                                <h5>Office Plants</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="mt-2 col-12 col-lg-6 single_portfolio_item home-design wow fadeInUp" data-wow-delay="300ms">
-                    <!-- Portfolio Thumbnail -->
-                    <div class="portfolio-thumbnail bg-img" style="background-image: url(img/g5.png);"></div>
-                    <!-- Portfolio Hover Text -->
-                    <div class="portfolio-hover-overlay">
-                        <a href="img/g5.png" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 7">
-                            <div class="port-hover-text">
-                                <h3>Minimal Flower Store</h3>
-                                <h5>Office Plants</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                
-
-                 <!-- Single Portfolio Area -->
-                <div class="mt-2 col-12 col-sm-6 col-lg-3 single_portfolio_item garden wow fadeInUp" data-wow-delay="200ms">
-                    <!-- Portfolio Thumbnail -->
-                    <div class="portfolio-thumbnail bg-img" style="background-image: url(img/g6.png);"></div>
-                    <!-- Portfolio Hover Text -->
-                    <div class="portfolio-hover-overlay">
-                        <a href="img/g6.png" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 6">
-                            <div class="port-hover-text">
-                                <h3>Minimal Flower Store</h3>
-                                <h5>Office Plants</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
+
     </section>
-    <!-- ##### Portfolio Area End ##### -->
-
-    <video src="img/video.mp4" width="300" height="300">Tu navegador no admite el elemento <code>video</code>.</video>
-
-    <!-- ##### Footer Area Start ##### -->
-    <footer class="footer-area bg-img" id="Contacto">
-        <div class="footerflex">
-            <div class="logofooter">
-                <img src="img/logored.png" alt="">
-            </div>
-            <div class="redesfooter">
-                <div class="red">
-                    <img src="img/cel.png" alt="">
-                    <p style="font-size: 1.2vw;">MOVIL</p>
-                </div>
-                <div class="red">
-                    <img src="img/mail.png" alt="">
-                    <p style="font-size: 1.2vw;">MAIL</p>
-                </div>
-                <div class="red">
-                    <img src="img/place.png" alt="">
-                    <p style="font-size: 1.2vw;">UBICACIÓN</p>
-                </div>
-            </div>
-        </div>
-        
-
-     
-    </footer>
-    <!-- ##### Footer Area End ##### -->
 
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
@@ -340,6 +281,7 @@
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <!-- All Plugins js -->
     <script src="js/plugins/plugins.js"></script>
+    <script src="./swiper-bundle.min.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
 </body>

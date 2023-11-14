@@ -185,10 +185,7 @@
         $.preventDefault();
     });
 
-    // :: 14.0 wow Active Code
-    if (browserWindow.width() > 767) {
-        new WOW().init();
-    }
+    
     // Obtener todas las etiquetas de anclaje <a> dentro del nav
 const links = document.querySelectorAll('.classynav ul li a');
 
@@ -246,4 +243,209 @@ function smoothScroll(e) {
   requestAnimationFrame(animation);
 }
 
+// Seleccionar el elemento que se va a observar
+const Obs1 = ({
+    id: document.querySelector("#LaEmpresa"),
+    secA: document.querySelector("#sec1"),
+    secB:  document.querySelector("#sec2")
+});
+
+const Obs2 = ({
+    id: document.querySelector("#Infra"),
+    secA: document.querySelector("#sec3"),
+    secB:  document.querySelector("#sec4")
+});
+
+
+
+
+
+function openSection (AObservar, section1, section2){
+// Opciones de configuración del observador
+    const opciones = {
+    root: null, // El viewport del navegador se usa como la región de visualización
+    rootMargin: '0px', // Margen adicional alrededor del viewport
+    threshold: 0.7 // Umbral de intersección al 50%
+  };
+
+  function elementoObservadoCallback(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // El elemento está siendo observado
+        
+        
+        section2.classList.add("step-1");
+        setTimeout(function() {section1.classList.add("step-unique")}, 100);
+        setTimeout(function() {section2.classList.add("step-2")}, 300);
+        setTimeout(function() {section2.classList.add("step-3")}, 1200);
+        
+      }   
+    });
+  }
+  
+  const observer = new IntersectionObserver(elementoObservadoCallback, opciones);
+  observer.observe(AObservar);
+}
+
+openSection(Obs1.id, Obs1.secA, Obs1.secB);
+openSection(Obs2.id, Obs2.secA, Obs2.secB);
+
+// let prevScrollPos = window.scrollY;
+// const navbar = document.getElementById('navbar');
+// const threshold = 100; // Puedes ajustar este valor según cuánto desea que el usuario haga scroll antes de que el fondo cambie de transparente a un color sólido.
+
+// window.onscroll = function() {
+//     const currentScrollPos = window.scrollY;
+    
+//     prevScrollPos = currentScrollPos;
+
+//     // Cambia la opacidad de la barra de navegación al principio de la página
+//     if (currentScrollPos < threshold) {
+//         navbar.style.background= 'rgba(0, 0, 0, 0)';
+//     } else {
+//         navbar.style.background = 'linear-gradient(133deg,#49494952, #117052d1 27% , #21795c, #6b6b6b87 85%)'; // Reemplaza 'color-aqui' con el color deseado (por ejemplo, 'rgb(0, 0, 0)' o '#000')
+//     }
+// }
+
+const sectionPlano= document.querySelector('#Plano');
+const contPlano= document.querySelector('#contPlano');
+const titlePlano= document.querySelector("#titlePlano");
+const Plano= document.querySelector('#PlanoIMG');
+const arrowPlano= document.querySelector('#arrow');
+
+titlePlano.addEventListener("click", function(){
+    if(contPlano.classList.contains("active")){
+        
+        Plano.style.opacity=0;
+        setTimeout(function() 
+        {
+        arrowPlano.classList.remove("arrowctive");
+        contPlano.classList.remove("active");
+        sectionPlano.classList.remove("sectionActive");
+        titlePlano.classList.add("m0");
+        }, 700);
+        
+    }
+    else{
+        contPlano.classList.add("active");
+        sectionPlano.classList.add("sectionActive");
+        setTimeout(function() {Plano.style.opacity=1; }, 800);
+        titlePlano.classList.remove("m0");
+        arrowPlano.classList.add("arrowctive");
+        
+    }
+});
+
+const swiper = new Swiper('.swiper', {
+    autoplay: true,
+    loop: true,
+    slidesPerView:3 ,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        300: {
+            slidesPerView:1
+        },
+        700: {
+            slidesPerView:2
+        },
+        1000: {
+            slidesPerView:3
+        },
+
+      }
+  });
+
+
+  var navbar = document.getElementById('navbar');
+  var navbarTop = document.querySelector('.bgnav');
+  var navbarDown = document.querySelector('.bgnavactive');
+
+  window.addEventListener('scroll', function () {
+    
+    if (window.scrollY > 50) {
+        navbarTop.style.opacity = 0;
+        navbarDown.style.opacity = 1; // Mostrar el fondo final
+    } else {
+        navbarTop.style.opacity = 1;
+        navbarDown.style.opacity = 0; // Ocultar el fondo final
+
+    }
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.itemNav');
+
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        window.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: 'smooth'
+        });
+      });
+    });
+  });
+
+  let isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
+
+    if (isMobile){
+        
+    const Quads = document.querySelectorAll(".despVentas");
+    let activeIndex = 0;
+
+    function updateLights() {
+        Quads.forEach((light, index) => {
+            if (index === activeIndex) {
+                light.classList.add('ventasActive');
+            } else {
+                light.classList.remove('ventasActive');
+            }
+        });
+
+        activeIndex = (activeIndex + 1) % Quads.length;
+        
+    }
+
+    const infos = document.querySelectorAll(".contFlex");
+    let activo = 0;
+
+    function updateInfos() {
+        infos.forEach((light, index) => {
+            if (index === activo) {
+                light.classList.add('step-3');
+            } else {
+                light.classList.remove('step-3');
+            }
+        });
+
+        activo = (activo + 1) % infos.length;
+        
+    }
+
+    // Configura el intervalo para cambiar las luces cada 1000 ms (1 segundo)
+    setInterval(updateInfos, 5000);
+    setInterval(updateLights, 5000);
+    }
+
+    const navMobile= document.getElementById("mobileNav");
+    const closers= document.querySelectorAll(".clNav");
+    const opener= document.getElementById("opener");
+
+    opener.addEventListener("click", function(){
+        navMobile.classList.add("openNav");
+    });
+
+    closers.forEach(function(elem) {
+        elem.addEventListener("click", function() {
+            navMobile.classList.remove("openNav");
+        });
+    });
+    
 })(jQuery);
+
