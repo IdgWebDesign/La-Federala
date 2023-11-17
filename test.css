@@ -624,6 +624,10 @@ background: rgb(0 81 33);
 
 
 @media only screen and (max-width: 700px) {
+
+    #videoViewer{
+        height: 90%;
+    }
     
     .FormatTitle{
         font-size: 1.8em;
