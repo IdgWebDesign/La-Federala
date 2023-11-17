@@ -412,19 +412,19 @@ document.addEventListener('DOMContentLoaded', function () {
         
     }
 
-    const infos = document.querySelectorAll(".contFlex");
+    const infos = document.querySelectorAll(".infoVentas");
     let activo = 0;
 
     function updateInfos() {
         infos.forEach((light, index) => {
-            if (index === activo) {
+            if (index === activo || index === (activo + 1) % infos.length) {
                 light.classList.add('step-3');
             } else {
                 light.classList.remove('step-3');
             }
         });
 
-        activo = (activo + 1) % infos.length;
+        activo = (activo + 2) % infos.length;
         
     }
 
@@ -446,6 +446,45 @@ document.addEventListener('DOMContentLoaded', function () {
             navMobile.classList.remove("openNav");
         });
     });
+
+    const srcs = ({
+        url1: "https://www.youtube.com/embed/1lu8A7UjG78?si=QEYYcqcas4U_VcBj",
+        url2: "https://www.youtube.com/embed/5w7oIWN5wig?si=wfGUTu4TIE1KvZEd",
+        url3: "https://www.youtube.com/embed/aNaX6DKo_8E"
+    });
+
+    const openers= document.querySelectorAll(".openerVideo");
+    const sectionViewer= document.getElementById("FocusViewer");
+    const closerVideo= document.getElementById("closerVideo");
+    const ytEmbed= document.getElementById("ytEmbed");
+    let idVID, urlEmbed;
+
+    openers.forEach(function (opener) {
+        opener.addEventListener('click', function (e) {
+            sectionViewer.style.display= "flex";
+            idVID= opener.id;
+
+            switch(idVID){
+                case 'a':
+                    urlEmbed = srcs.url1;
+                break;
+                case 'b':
+                    urlEmbed = srcs.url2;
+                break;
+                case 'c':
+                    urlEmbed = srcs.url3;
+                break;
+            }
+
+            ytEmbed.src= urlEmbed;
+        }); 
+    });
+
+    closerVideo.addEventListener('click', function(e){
+        sectionViewer.style.display= "none";
+    })
+
+
     
 })(jQuery);
 

@@ -197,16 +197,17 @@
 
 
 .infoVentas{
-    
+    z-index: 996;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     color: white;
     margin-right:0;
-    opacity: 1;
+    opacity: 0;
     transition: 0.5s;
     width: 50%;
+    margin-bottom: 2%;
 }
 
 
@@ -222,18 +223,11 @@
     font-family: "Source-SB";
 }
 
-.contFlex{
-    z-index: 997;
-    opacity: 0;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    transition: 0.5s;
-}
+
 
 
 @media only screen and (min-width: 768px) {
-    .itemVentas:hover .contFlex{
+    .itemVentas:hover .infoVentas{
         opacity: 1;
         
     }
@@ -406,6 +400,41 @@ background: rgb(0 81 33);
     
 }
 
+#FocusViewer{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.336);
+    z-index: 999;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#videoViewer{
+    width: 80%;
+    height: 80%;
+    background-color: black;
+    
+}
+
+#closerVideo{
+    width: 35px;
+    height: 35px;
+    position:absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+}
+
+.openerVideo{
+    cursor: pointer;
+}
+
+
 @media only screen and (max-width: 1400px) {
     .contNav{
         width:60%;
@@ -552,7 +581,9 @@ background: rgb(0 81 33);
     .infoVentas p{
         margin: 0;
     }
-
+    .infoVentas{
+        margin: 0;
+    }
     .stype{
         flex-direction: row-reverse;
     }
@@ -571,11 +602,24 @@ background: rgb(0 81 33);
         height: 3.5rem;
         margin: 2% 0%;
     }
+    .imgVentas{
+        order: 1;
+    }
+    
+    .O0{
+        order: 1;
+    }
+    .Ventas{
+        height: 50em;
+    }
 }
 @media only screen and (max-width: 768px) {
 .itemVentas:hover .despVentas{
         
 }
+
+
+
 }
 
 
